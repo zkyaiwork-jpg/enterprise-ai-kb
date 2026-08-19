@@ -1,0 +1,91 @@
+# Python virtual environments
+venv/
+.venv/
+env/
+
+# Python caches and test artifacts
+__pycache__/
+**/__pycache__/
+*.py[cod]
+*.pyc
+*.pyo
+*.pyd
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+htmlcov/
+.coverage
+
+# Node and frontend build artifacts
+node_modules/
+**/node_modules/
+dist/
+**/dist/
+.vite/
+*.tsbuildinfo
+
+# Environment variables and sensitive configuration
+.env
+.env.*
+!.env.example
+
+# Uploaded documents and vector databases
+data/documents/
+data/vector_db/
+**/data/vector_db/
+tests/data/vector_db/
+data/chat_history.db
+data/chat_history.db-shm
+data/chat_history.db-wal
+*.db
+*.sqlite
+*.sqlite3
+*.db.*
+*.bak
+
+# Runtime data and generated deployment packages
+data/logs/
+deploy-data/
+deploy-package/
+time-fix-package/
+enterprise-ai-kb-data.zip
+enterprise-ai-kb-deploy.zip
+time-fix-package.zip
+
+# Private production reports and one-off local utilities
+/production_acceptance_stage_report_2026-08-17.md
+/project_status_report.md
+/split_models.py
+/test_parser.py
+
+# Model and package caches
+.cache/
+.huggingface/
+huggingface/
+/models/
+model-cache/
+**/model-cache/
+huggingface-models.tar.gz
+huggingface-models.part*
+*.bin
+*.pt
+*.pth
+*.safetensors
+*.onnx
+
+# Logs
+logs/
+*.log
+
+# Temporary files and generated output
+tmp/
+temp/
+output/
+*.tmp
+
+# IDE and operating-system files
+.idea/
+.vscode/
+.DS_Store
+Thumbs.db
+desktop.ini

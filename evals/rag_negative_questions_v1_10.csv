@@ -1,0 +1,11 @@
+question_id,question,question_type,expected_result
+51,公司通常每个月几号发工资？,negative,no_relevant_document
+52,新员工的试用期一般是多久，转正需要办什么手续？,negative,no_relevant_document
+53,公司的年终奖按什么标准计算和发放？,negative,no_relevant_document
+54,工作日晚上加班的加班费是怎么计算的？,negative,no_relevant_document
+55,员工每个工作日的餐补标准是多少？,negative,no_relevant_document
+56,公司对开车上下班的员工有停车费补贴吗？,negative,no_relevant_document
+57,部门如果想招聘新员工，需要走哪些申请和审批流程？,negative,no_relevant_document
+58,员工申请职级晋升需要满足哪些条件？,negative,no_relevant_document
+59,新入职员工怎么领取电脑、文具等办公用品？,negative,no_relevant_document
+60,公司的绩效考核是按月度还是季度进行，结果分几个等级？,negative,no_relevant_document

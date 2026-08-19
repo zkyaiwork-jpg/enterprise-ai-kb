@@ -1,0 +1,4 @@
+﻿question_id,question,expected_document_id,expected_filename,raw_top1_document_id,raw_top1_filename,raw_top1_chunk_index,raw_top1_distance,raw_top2_document_id,raw_top2_filename,raw_top2_chunk_index,raw_top2_distance,raw_top3_document_id,raw_top3_filename,raw_top3_chunk_index,raw_top3_distance,diagnosed_at
+23,因为工作需要想坐更高等级的交通工具，应该提前经过谁同意？,7,差旅及费用报销制度.docx,14,员工考勤管理制度.docx,1,1.0129785537719727,7,差旅及费用报销制度.docx,0,1.0232324600219727,7,差旅及费用报销制度.docx,1,1.049309253692627,2026-08-15T17:00:55+08:00
+36,报销申请中，业务真实性和票据金额分别由谁审核？,7,差旅及费用报销制度.docx,7,差旅及费用报销制度.docx,1,0.9294114112854004,13,信息安全管理规范.docx,2,1.033405065536499,14,员工考勤管理制度.docx,2,1.0756261348724365,2026-08-15T17:00:55+08:00
+49,如果怀疑电脑中了病毒，继续操作可能扩大风险，这时员工第一步应该做什么并向谁反馈？,13,信息安全管理规范.docx,12,产品售后服务规范.docx,1,0.8168970942497253,13,信息安全管理规范.docx,1,0.8204531669616699,13,信息安全管理规范.docx,2,0.9010230302810669,2026-08-15T17:00:55+08:00

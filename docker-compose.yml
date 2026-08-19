@@ -1,0 +1,46 @@
+services:
+  backend:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    environment:
+      DEEPSEEK_API_KEY: ${DEEPSEEK_API_KEY:-}
+      APP_LOG_DIR: /app/logs
+    ports:
+      - "8000:8000"
+    volumes:
+      - app-data:/app/data
+      - model-cache:/app/.cache/huggingface
+      - app-logs:/app/logs
+    restart: unless-stopped
+    healthcheck:
+      test:
+        - CMD
+        - python
+        - -c
+        - "import urllib.request; urllib.request.urlopen('http://127.0.0.1:8000/health', timeout=10)"
+      interval: 30s
+      timeout: 15s
+      retries: 5
+      start_period: 180s
+
+  frontend:
+    build:
+      context: .
+      dockerfile: frontend-react/Dockerfile
+      args:
+        VITE_API_BASE_URL: ${VITE_API_BASE_URL:-/api}
+    ports:
+      - "3000:80"
+    depends_on:
+      backend:
+        condition: service_healthy
+    restart: unless-stopped
+
+volumes:
+  app-data:
+    name: enterprise-ai-kb-data
+  model-cache:
+    name: enterprise-ai-kb-model-cache
+  app-logs:
+    name: enterprise-ai-kb-logs

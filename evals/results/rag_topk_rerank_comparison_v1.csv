@@ -1,0 +1,7 @@
+﻿method,top_k,dataset,total_questions,top1_hit,top1_accuracy,top3_hit,top3_accuracy,no_result_count,correct_reject,correct_reject_rate,false_positive,false_positive_rate,chroma_time,rerank_time,total_time,average_time,timing_scope,evaluated_at
+rerank,3,positive,50,46,92.00%,47,94.00%,3,,,,,0.525681,6.290122,6.815803,0.136316,warm_models_per_query_embedding_plus_chroma,2026-08-16T10:07:51+08:00
+rerank,3,negative,10,,,,,10,10,100.00%,0,0.00%,0.099285,1.188833,1.288118,0.128812,warm_models_per_query_embedding_plus_chroma,2026-08-16T10:07:51+08:00
+rerank,5,positive,50,46,92.00%,47,94.00%,3,,,,,0.524756,10.066291,10.591047,0.211821,warm_models_per_query_embedding_plus_chroma,2026-08-16T10:07:51+08:00
+rerank,5,negative,10,,,,,10,10,100.00%,0,0.00%,0.099081,2.002590,2.101671,0.210167,warm_models_per_query_embedding_plus_chroma,2026-08-16T10:07:51+08:00
+rerank,10,positive,50,46,92.00%,47,94.00%,3,,,,,0.568873,20.219655,20.788528,0.415771,warm_models_per_query_embedding_plus_chroma,2026-08-16T10:07:51+08:00
+rerank,10,negative,10,,,,,10,10,100.00%,0,0.00%,0.110801,3.961901,4.072702,0.407270,warm_models_per_query_embedding_plus_chroma,2026-08-16T10:07:51+08:00

@@ -1,0 +1,75 @@
+{
+  "name": "enterprise-ai-kb-desktop",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Enterprise AI Knowledge Base Assistant desktop application",
+  "main": "dist/main.js",
+  "scripts": {
+    "build:electron": "tsc -p tsconfig.json",
+    "test:settings": "npm run build:electron && node test-settings.cjs",
+    "build:frontend": "cross-env VITE_API_BASE_URL=/api npm --prefix ../frontend-react run build",
+    "build:model": "..\\venv\\Scripts\\python.exe prepare_model.py",
+    "build:backend": "..\\venv\\Scripts\\python.exe -m PyInstaller --noconfirm --distpath backend-dist --workpath backend-build backend.spec",
+    "dev:ui": "npm --prefix ../frontend-react run dev -- --host 127.0.0.1",
+    "dev:electron": "npm run build:electron && cross-env ELECTRON_DEV_URL=http://127.0.0.1:5173 electron .",
+    "dev": "concurrently -k -s first \"npm:dev:ui\" \"npm:dev:electron\"",
+    "pack": "npm run build:frontend && npm run build:model && npm run build:backend && npm run build:electron && electron-builder --dir",
+    "dist": "npm run build:frontend && npm run build:model && npm run build:backend && npm run build:electron && electron-builder --win"
+  },
+  "devDependencies": {
+    "@types/node": "^24.0.0",
+    "concurrently": "^9.2.1",
+    "cross-env": "^10.1.0",
+    "electron": "^39.0.0",
+    "electron-builder": "^26.0.12",
+    "typescript": "^7.0.2"
+  },
+  "build": {
+    "appId": "com.enterprise.ai.knowledgebase",
+    "productName": "企业AI知识库助手",
+    "directories": {
+      "output": "release"
+    },
+    "files": [
+      "dist/**/*",
+      "package.json"
+    ],
+    "extraResources": [
+      {
+        "from": "../frontend-react/dist",
+        "to": "frontend"
+      },
+      {
+        "from": "backend-dist/enterprise-ai-kb-backend",
+        "to": "backend"
+      },
+      {
+        "from": "model-cache",
+        "to": "model-cache"
+      }
+    ],
+    "win": {
+      "target": [
+        {
+          "target": "nsis",
+          "arch": [
+            "x64"
+          ]
+        }
+      ],
+      "artifactName": "${productName}-${version}-Setup.${ext}"
+    },
+    "nsis": {
+      "oneClick": true,
+      "perMachine": false,
+      "createDesktopShortcut": true,
+      "createStartMenuShortcut": true,
+      "deleteAppDataOnUninstall": false,
+      "include": "build/installer.nsh"
+    }
+  },
+  "allowScripts": {
+    "electron": true,
+    "electron-winstaller": true
+  }
+}

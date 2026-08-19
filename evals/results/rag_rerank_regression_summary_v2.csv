@@ -1,0 +1,5 @@
+﻿method,dataset,total_questions,top1_hit,top1_accuracy,top3_hit,top3_accuracy,no_result_count,correct_reject,false_positive,chroma_time,rerank_time,total_time,average_time,timing_scope,evaluated_at
+baseline,positive,50,43,86.00%,47,94.00%,3,,,0.609962,,0.610087,0.012202,warm_models_per_query_embedding_plus_chroma,2026-08-16T09:54:10+08:00
+rerank,positive,50,46,92.00%,47,94.00%,3,,,0.609962,6.260364,6.870326,0.137407,warm_models_per_query_embedding_plus_chroma,2026-08-16T09:54:10+08:00
+baseline,negative,10,,,,,10,10,0,0.109873,,0.109893,0.010989,warm_models_per_query_embedding_plus_chroma,2026-08-16T09:54:10+08:00
+rerank,negative,10,,,,,10,10,0,0.109873,1.185267,1.295140,0.129514,warm_models_per_query_embedding_plus_chroma,2026-08-16T09:54:10+08:00
