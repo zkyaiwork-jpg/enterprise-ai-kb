@@ -495,30 +495,7 @@ PDF、TXT 等格式尚未实现正式后端解析。
 * AuditLog 审计日志
 * Alembic 数据库迁移
 * RAG Evaluation
-
 ---
-
-# 项目截图
-
-> 建议在此处放置实际系统截图。
-
-推荐展示：
-
-### 1. AI 知识问答
-
-展示用户提问、AI 回答以及 Sources。
-
-### 2. 企业知识库
-
-展示文档列表、文档上传和文档可见性。
-
-### 3. 用户与组织管理
-
-展示 Department、Team 和 User 管理。
-
-### 4. API 文档
-
-展示 FastAPI Swagger 接口。
 
 ---
 
